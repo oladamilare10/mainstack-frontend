@@ -298,7 +298,7 @@ export default function FilterPanel({ isOpen, onClose }: FilterPanelProps) {
           </Text>
           <IconButton
             aria-label="Close filter"
-            icon={<MdClose />}
+            icon={<MdClose /> as any}
             variant="ghost"
             size="sm"
             color="#56616B"
