@@ -1,36 +1,157 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mainstack Frontend Take-Home Assessment
 
-## Getting Started
+A modern revenue dashboard built with Next.js, TypeScript, and Chakra UI.
 
-First, run the development server:
+## 🌐 Live Demo
+
+**Production URL:** https://mainstack-oey2ep02j-oladamilare10s-projects.vercel.app
+
+**GitHub Repository:** https://github.com/oladamilare10/mainstack-frontend
+
+## 📋 Project Overview
+
+This project is a full-featured revenue dashboard application that displays:
+- Available balance with withdraw functionality
+- Revenue chart with visual data representation
+- Transaction list with filtering capabilities
+- User profile and statistics
+- Responsive design for mobile, tablet, and desktop
+
+## 🚀 Tech Stack
+
+- **Framework:** Next.js 13.4.19 (Pages Router)
+- **Language:** TypeScript 5.0.4
+- **UI Library:** Chakra UI 2.8.1
+- **Data Fetching:** SWR 2.2.4
+- **Icons:** react-icons 5.5.0
+- **Testing:** Jest 29.5.0 + React Testing Library 14.0.0
+- **Code Quality:** ESLint + Prettier
+- **CI/CD:** GitHub Actions
+
+## 📦 Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/oladamilare10/mainstack-frontend.git
+cd mainstack-frontend
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm test` - Run Jest tests
+- `npm run typecheck` - Run TypeScript type checking
 
-## Learn More
+## ✨ Features
 
-To learn more about Next.js, take a look at the following resources:
+### Core Functionality
+- ✅ Real-time data fetching from Mainstack API
+- ✅ Interactive revenue chart visualization
+- ✅ Transaction list with status indicators
+- ✅ Advanced filtering (date range, transaction type, status)
+- ✅ User profile with dropdown menu
+- ✅ Apps navigation menu
+- ✅ Responsive design (mobile-first)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### UI/UX
+- ✅ Pixel-perfect implementation matching Figma design
+- ✅ Smooth animations and transitions
+- ✅ Loading states and error handling
+- ✅ Accessible components (ARIA labels)
+- ✅ Mobile-optimized navigation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Code Quality
+- ✅ TypeScript strict mode
+- ✅ Component unit tests
+- ✅ ESLint + Prettier configuration
+- ✅ Continuous Integration (GitHub Actions)
 
-## Deploy on Vercel
+## 🏗️ Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+mainstack/
+├── src/
+│   ├── components/          # React components
+│   │   ├── layout/         # Layout components (AppShell)
+│   │   ├── WalletCard.tsx  # Balance display
+│   │   ├── RevenueChart.tsx# Chart visualization
+│   │   ├── TransactionsList.tsx
+│   │   ├── FilterPanel.tsx # Transaction filters
+│   │   ├── UserMenu.tsx    # User dropdown
+│   │   └── AppsMenu.tsx    # Apps dropdown
+│   ├── hooks/              # Custom React hooks
+│   │   ├── useUser.ts
+│   │   ├── useWallet.ts
+│   │   └── useTransactions.ts
+│   ├── lib/                # Utilities
+│   │   └── api.ts          # API client
+│   ├── pages/              # Next.js pages
+│   │   ├── _app.tsx
+│   │   ├── _document.tsx
+│   │   └── index.tsx       # Main dashboard
+│   ├── styles/             # Styling
+│   │   ├── globals.css
+│   │   ├── theme.ts        # Chakra theme
+│   │   └── tokens.ts       # Design tokens
+│   └── tests/              # Unit tests
+├── public/                 # Static assets
+├── jest.config.js
+├── tsconfig.json
+└── package.json
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧪 Testing
+
+```bash
+# Run all tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+```
+
+## 🎨 Design System
+
+The application uses a custom design system with:
+- **Colors:** `#131316` (dark), `#56616B` (gray), `#FF5403` (accent)
+- **Typography:** Inter font family
+- **Border Radius:** 20px for cards, full for pills
+- **Responsive Breakpoints:** 
+  - Mobile: 0px+
+  - Tablet: 768px+
+  - Desktop: 992px+
+
+## 📱 Responsive Design
+
+The application is fully responsive with three breakpoints:
+- **Mobile (base):** Single column layout
+- **Tablet (md: 768px):** Adjusted spacing and font sizes
+- **Desktop (lg: 992px):** Two-column grid layout
+
+## 🔗 API Integration
+
+The app fetches data from:
+- `GET /user` - User profile information
+- `GET /wallet` - Wallet balance data
+- `GET /transactions` - Transaction history
+
+Base URL: `https://fe-task-api.mainstack.io`
+
+## 📝 License
+
+This project is part of a take-home assessment for Mainstack.
+
+---
+
+Built with ❤️ by Oladamilare

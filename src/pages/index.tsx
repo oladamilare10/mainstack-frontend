@@ -52,6 +52,14 @@ export default function Home() {
 
 // Stats Card Component
 function StatsCard({ wallet }: { wallet: any }) {
+  const formatCurrency = (amount: number) => {
+    const formatted = amount.toLocaleString('en-US', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+    return `USD ${formatted}`;
+  };
+
   const StatItem = ({ label, value }: { label: string; value: string }) => (
     <Box py={5}>
       <HStack spacing={2} justify="space-between" align="center" mb={2}>
@@ -85,10 +93,10 @@ function StatsCard({ wallet }: { wallet: any }) {
   return (
     <Box bg="white" p={7} borderRadius="20px" boxShadow="sm" h="fit-content">
       <VStack align="stretch" spacing={0} divider={<Box h="1px" bg="#F5F5F5" />}>
-        <StatItem label="Ledger Balance" value="USD 0.00" />
-        <StatItem label="Total Payout" value="USD 55,080.00" />
-        <StatItem label="Total Revenue" value="USD 175,580.00" />
-        <StatItem label="Pending Payout" value="USD 0.00" />
+        <StatItem label="Ledger Balance" value={formatCurrency(wallet.ledger_balance || 0)} />
+        <StatItem label="Total Payout" value={formatCurrency(wallet.total_payout || 0)} />
+        <StatItem label="Total Revenue" value={formatCurrency(wallet.total_revenue || 0)} />
+        <StatItem label="Pending Payout" value={formatCurrency(wallet.pending_payout || 0)} />
       </VStack>
     </Box>
   );
