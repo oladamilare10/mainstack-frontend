@@ -11,8 +11,8 @@ export default function WalletCard({ wallet }: { wallet?: Wallet | null }) {
 					Available Balance
 				</Text>
 				<Flex align="center" alignItems="center" justify="flex-start" gap={100} flexWrap="wrap">
-					<Text fontSize={{ base: '32px', md: '40px' }} fontWeight="700" color="#131316" lineHeight="1" letterSpacing="-0.02em">
-						{wallet.currency} {wallet.balance.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+					<Text fontSize={{ base: '30px', md: '35px' }} fontWeight="700" color="#131316" lineHeight="1" letterSpacing="-0.02em">
+						USD {wallet.balance.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
 					</Text>
 					<Button 
 						bg="#131316" 

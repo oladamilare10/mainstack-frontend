@@ -1,4 +1,4 @@
-import { Box, VStack, HStack, Text, Flex } from '@chakra-ui/react';
+import { Box, VStack, HStack, Text, Flex, Icon } from '@chakra-ui/react';
 import { useRef, useEffect } from 'react';
 import { 
   BsGear, 
@@ -18,7 +18,7 @@ interface UserMenuProps {
 
 interface MenuItem {
   id: string;
-  icon: React.ElementType;
+  icon: any;
   label: string;
   isDivider?: boolean;
 }
@@ -136,8 +136,8 @@ export default function UserMenu({ isOpen, onClose }: UserMenuProps) {
                 onClose();
               }}
             >
-              <Box
-                as={item.icon}
+              <Icon
+                as={item.icon as any}
                 fontSize="18px"
                 color="#56616B"
               />

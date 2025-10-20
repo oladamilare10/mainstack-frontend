@@ -1,4 +1,4 @@
-import { Box, Text, HStack, VStack, Button, Circle, Flex } from '@chakra-ui/react';
+import { Box, Text, HStack, VStack, Icon, Button, Circle, Flex } from '@chakra-ui/react';
 import { useState } from 'react';
 import { useTransactions } from '../hooks/useTransactions';
 import { SkeletonTransactions } from './Skeletons';
@@ -31,7 +31,7 @@ export default function TransactionsList() {
 						<Button 
 							variant="outline" 
 							size="sm"
-							leftIcon={<FilterIcon />}
+							leftIcon={<Icon as={FilterIcon as any} />}
 							borderColor="#DBDEE5"
 							color="#131316"
 							fontWeight="600"
@@ -46,7 +46,7 @@ export default function TransactionsList() {
 						<Button 
 							variant="outline"
 							size="sm"
-							leftIcon={<DownloadIcon />}
+							leftIcon={<Icon as={DownloadIcon as any} />}
 							borderColor="#DBDEE5"
 							color="#131316"
 							fontWeight="600"
@@ -81,12 +81,12 @@ export default function TransactionsList() {
 									>
 										{isDeposit && (
 											<Circle size={{ base: '20px', md: '24px' }} bg="transparent" >
-												<BsArrowDownLeft color="#00AC56" size={14} fontWeight="bold" />
+												<Icon as={BsArrowDownLeft as any} color="#00AC56" boxSize={3} fontWeight="bold" />
 											</Circle>
 										)}
 										{isWithdrawal && (
 											<Circle size={{ base: '20px', md: '24px' }} bg="transparent">
-												<BsArrowDownLeft color="#DC2626" size={14} fontWeight="bold" style={{ transform: 'rotate(180deg)' }} />
+												<Icon as={BsArrowDownLeft as any} color="#DC2626" boxSize={3} fontWeight="bold" style={{ transform: 'rotate(180deg)' }} />
 											</Circle>
 										)}
 										{isPending && (

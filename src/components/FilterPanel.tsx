@@ -298,7 +298,7 @@ export default function FilterPanel({ isOpen, onClose }: FilterPanelProps) {
           </Text>
           <IconButton
             aria-label="Close filter"
-            icon={<MdClose /> as any}
+            icon={<Icon as={MdClose as any} />}
             variant="ghost"
             size="sm"
             color="#56616B"
@@ -419,7 +419,7 @@ export default function FilterPanel({ isOpen, onClose }: FilterPanelProps) {
                   color="#56616B"
                   fontSize="20px"
                 >
-                  <BiChevronDown />
+                  <Icon as={BiChevronDown as any} />
                 </Box>
                 {isStartCalendarOpen && renderCalendar(true)}
               </Box>
@@ -445,7 +445,7 @@ export default function FilterPanel({ isOpen, onClose }: FilterPanelProps) {
                   color="#56616B"
                   fontSize="20px"
                 >
-                  <BiChevronDown />
+                  <Icon as={BiChevronDown as any} />
                 </Box>
                 {isEndCalendarOpen && renderCalendar(false)}
               </Box>
@@ -481,7 +481,7 @@ export default function FilterPanel({ isOpen, onClose }: FilterPanelProps) {
                 color="#56616B"
                 fontSize="20px"
               >
-                <BiChevronDown />
+                <Icon as={BiChevronDown as any} />
               </Box>
               
               {/* Dropdown Menu */}
@@ -567,7 +567,7 @@ export default function FilterPanel({ isOpen, onClose }: FilterPanelProps) {
                 color="#56616B"
                 fontSize="20px"
               >
-                <BiChevronDown />
+                <Icon as={BiChevronDown as any} />
               </Box>
               
               {/* Dropdown Menu */}

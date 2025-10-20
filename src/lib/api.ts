@@ -10,8 +10,9 @@ export async function fetcher<T>(path: string): Promise<T> {
 }
 
 export type User = {
-  id: string;
-  name: string;
+  id?: string;
+  first_name: string;
+  last_name: string;
   email?: string;
   avatar?: string;
 };

@@ -68,7 +68,7 @@ export default function AppShell({ children }: { children: ReactNode }) {
                   bg="transparent"
                   px={4}
                   h="36px"
-                  leftIcon={<Box as="span" fontSize="16px"><BiHome /></Box>}
+                  leftIcon={<Box as="span" fontSize="16px"><Icon as={BiHome as any} /></Box>}
                   _hover={{ bg: '#F7F7F8' }}
                 >
                   Home
@@ -81,7 +81,7 @@ export default function AppShell({ children }: { children: ReactNode }) {
                   bg="transparent"
                   px={4}
                   h="36px"
-                  leftIcon={<Box as="span" fontSize="16px"><MdInsertChartOutlined /></Box>}
+                  leftIcon={<Box as="span" fontSize="16px"><Icon as={MdInsertChartOutlined as any} /></Box>}
                   _hover={{ bg: '#F7F7F8' }}
                 >
                   Analytics
@@ -95,7 +95,7 @@ export default function AppShell({ children }: { children: ReactNode }) {
                   px={5}
                   h="36px"
                   borderRadius="full"
-                  leftIcon={<Box as="span" fontSize="16px"><HiCash /></Box>}
+                  leftIcon={<Box as="span" fontSize="16px"><Icon as={HiCash as any} /></Box>}
                   _hover={{ bg: '#2A2A2E' }}
                 >
                   Revenue
@@ -108,7 +108,7 @@ export default function AppShell({ children }: { children: ReactNode }) {
                   bg="transparent"
                   px={4}
                   h="36px"
-                  leftIcon={<Box as="span" fontSize="16px"><FiUsers /></Box>}
+                  leftIcon={<Box as="span" fontSize="16px"><Icon as={FiUsers as any} /></Box>}
                   _hover={{ bg: '#F7F7F8' }}
                 >
                   CRM
@@ -122,7 +122,7 @@ export default function AppShell({ children }: { children: ReactNode }) {
                     bg="transparent"
                     px={4}
                     h="36px"
-                    leftIcon={<Box as="span" fontSize="16px"><IoAppsOutline /></Box>}
+                    leftIcon={<Box as="span" fontSize="16px"><Icon as={IoAppsOutline as any} /></Box>}
                     _hover={{ bg: '#F7F7F8' }}
                     onClick={() => setIsAppsOpen(!isAppsOpen)}
                   >
@@ -142,7 +142,7 @@ export default function AppShell({ children }: { children: ReactNode }) {
             <HStack spacing={2}>
               <IconButton
                 aria-label="Notifications"
-                icon={<BsBell size={20} />}
+                icon={<Icon as={BsBell as any} size={20} />}
                 variant="ghost"
                 size="md"
                 color="#56616B"
@@ -151,7 +151,7 @@ export default function AppShell({ children }: { children: ReactNode }) {
               />
               <IconButton
                 aria-label="Messages"
-                icon={<BsChatDots size={20} />}
+                icon={<Icon as={BsChatDots as any} size={20} />}
                 variant="ghost"
                 size="md"
                 color="#56616B"
@@ -189,7 +189,7 @@ export default function AppShell({ children }: { children: ReactNode }) {
                     OJ
                   </Box>
                   <Box color="#56616B">
-                    <HiOutlineMenu size={22} />
+                    <Icon as={HiOutlineMenu as any} size={22} />
                   </Box>
                 </Flex>
                 {isUserMenuOpen && (
