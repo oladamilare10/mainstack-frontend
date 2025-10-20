@@ -12,7 +12,7 @@ import { IoAppsOutline } from 'react-icons/io5';
 
 const Logo = () => (
 	<Flex align="center" cursor="pointer" _hover={{ opacity: 0.85 }} transition="opacity 0.2s">
-		<Image src="/logo.svg" alt="Mainstack Logo" width="32px" height="32px" />
+		<Image src="/logo.svg" alt="Mainstack Logo" width="22px" height="22px" />
 	</Flex>
 );
 
